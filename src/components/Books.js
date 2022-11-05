@@ -1,3 +1,5 @@
+/* eslint-disable arrow-body-style */
+/* eslint-disable react/jsx-key */
 import React from 'react';
 import Book from './Book';
 import Input from './Input';
@@ -9,15 +11,15 @@ class Books extends React.Component {
       books: [
         {
           id: 1,
-          author: "J.K. Rowling",
-          title: "Harry Porter",
+          author: 'J.K. Rowling',
+          title: 'Harry Porter',
         },
         {
           id: 2,
-          author: "J.R.R. Tolkien",
-          title: "The Lord of the Rings",
+          author: 'J.R.R. Tolkien',
+          title: 'The Lord of the Rings',
         },
-      ]
+      ],
     };
   }
 
@@ -28,12 +30,12 @@ class Books extends React.Component {
         {books.map((book) => {
           return (
             <Book id={book.id} author={book.author} title={book.title} />
-          )
+          );
         })}
-        <button>Remove</button>
+        <button type="submit">Remove</button>
         <Input />
       </>
-    )
+    );
   }
 }
 

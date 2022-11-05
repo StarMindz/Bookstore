@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 const Categories = () => {
   return (
     <button type="submit" className="statusCheck">Check status</button>
