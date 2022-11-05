@@ -1,7 +1,7 @@
 import React from 'react';
 import Books from './components/Books';
 import Categories from './components/Categories';
-import Nav from './Pages/Nav';
+import Nav from './components/Nav';
 import './App.css';
 import {
   BrowserRouter as Router,
