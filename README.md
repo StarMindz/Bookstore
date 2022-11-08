@@ -2,7 +2,7 @@
 
 #  BookStore
 
-> "Bookstore"  is a website that allow one to store book titles with their author and displays them. It serves as an online archive of books. This Website was created using React
+> "Bookstore"  is a website that allow one to store book titles with their author and displays them. It serves as an online archive of books. This Website was created using React. Users can view a list of books, add a book by entering a title, an author, and a category, and remove a book.
 
 
 ## Built With
