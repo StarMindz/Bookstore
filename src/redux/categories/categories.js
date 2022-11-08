@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 const InitialState = [];
 
 export const checkStatus = () => {
@@ -8,9 +9,9 @@ export const checkStatus = () => {
 
 const categoriesReducer = (state = InitialState, action) => {
   if (action.type === 'STATUS_CHECKED') {
-    return "Under construction";
+    return 'Under construction';
   }
   return state;
-}
+};
 
 export default categoriesReducer;
