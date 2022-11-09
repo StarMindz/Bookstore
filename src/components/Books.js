@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Book from './Book';
 import Input from './Input';
@@ -27,9 +26,10 @@ class Books extends React.Component {
     return (
       <>
         {books.map((book) => {
-          return (
+          const bookJsx = (
             <Book id={book.id} author={book.author} title={book.title} />
           );
+          return bookJsx;
         })}
         <button type="submit">Remove</button>
         <Input />
