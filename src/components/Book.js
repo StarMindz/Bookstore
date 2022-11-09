@@ -1,14 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Book = ({ id, author, title }) => {
-  return (
     <div id={id}>
       { title }
       by
       { author }
     </div>
-  );
 };
 
 Book.propTypes = {
