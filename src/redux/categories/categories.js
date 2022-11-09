@@ -1,13 +1,14 @@
 const InitialState = [];
 
 export const checkStatus = () => {
-  return {
-    type: 'STATUS_CHECKED',
+  const action = {
+    type: 'Bookstore/categories/STATUS_CHECKED',
   };
+  return action;
 };
 
 const categoriesReducer = (state = InitialState, action) => {
-  if (action.type === 'STATUS_CHECKED') {
+  if (action.type === 'Bookstore/categories/STATUS_CHECKED') {
     return 'Under construction';
   }
   return state;
