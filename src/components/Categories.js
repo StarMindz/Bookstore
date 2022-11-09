@@ -1,4 +1,3 @@
-/* eslint-disable arrow-body-style */
 import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
 

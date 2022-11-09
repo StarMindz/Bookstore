@@ -1,4 +1,3 @@
-/* eslint-disable arrow-body-style */
 const InitialState = [];
 
 export const addBook = (id, author, title) => {
