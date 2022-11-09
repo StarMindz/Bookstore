@@ -1,5 +1,4 @@
-/* eslint-disable arrow-body-style */
-/* eslint-disable react/jsx-key */
+
 import React from 'react';
 import Book from './Book';
 import Input from './Input';
