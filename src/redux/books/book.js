@@ -4,22 +4,14 @@ const InitialState = [];
 export const addBook = (id, author, title) => {
   return {
     type: 'ADDED_BOOK',
-    payload: {
-      id: id,
-      author: author,
-      title: title,
-    },
+    payload: {id, author, title}
   };
 };
 
 export const removeBook = (id, author, title) => {
   return {
     type: 'REMOVED_BOOK',
-    payload: {
-      id: id,
-      author: author,
-      title: title,
-    },
+    payload: {id, author, title},
   };
 };
 
