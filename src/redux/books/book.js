@@ -4,14 +4,14 @@ const InitialState = [];
 export const addBook = (id, author, title) => {
   return {
     type: 'ADDED_BOOK',
-    payload: {id, author, title}
+    payload: { id, author, title },
   };
 };
 
 export const removeBook = (id, author, title) => {
   return {
     type: 'REMOVED_BOOK',
-    payload: {id, author, title},
+    payload: { id, author, title },
   };
 };
 
@@ -21,7 +21,7 @@ const bookReducer = (state = InitialState, action) => {
       return [...state, action.payload];
 
     case ('REMOVED_BOOK'):
-      return state.filter((item) => { return item.id !== action.payload.id } )
+      return state.filter((item) => { return item.id !== action.payload.id; });
     default:
       return state;
   };
