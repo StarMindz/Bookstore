@@ -14,7 +14,7 @@ const Input = () => {
     const id = books.length + 1;
     const author = authorName;
     const title = titleName;
-    dispatch(addBook(id, author, title))
+    dispatch(addBook(id, author, title));
     setAuthorName('');
     setTitleName('');
   };
