@@ -4,20 +4,20 @@ import { removeBook } from '../redux/books/book';
 import Book from './Book';
 import Input from './Input';
 
-const Books = (props) => {
-  const books = useSelector(state => state.book);
+const Books = () => {
+  const books = useSelector((state) => state.book);
   const dispatch = useDispatch();
 
   const handleRemove = (element) => {
-    const id = element.target.id;
-    dispatch(removeBook(id));
-  }
+    const idNumber = element.target.id;
+    dispatch(removeBook(idNumber));
+  };
 
   return (
     <>
       {books.map((book) => {
         const bookJsx = (
-          <div className='singleBook'>
+          <div className="singleBook">
             <Book id={book.id} author={book.author} title={book.title} />
             <button id={book.id} onClick={handleRemove} type="submit">Remove</button>
           </div>
@@ -27,6 +27,6 @@ const Books = (props) => {
       <Input />
     </>
   );
-}
+};
 
 export default Books;

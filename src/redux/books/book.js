@@ -33,7 +33,7 @@ const bookReducer = (state = InitialState, action) => {
       return [...state, action.payload];
 
     case ('Bookstore/books/REMOVED_BOOK'):
-      return [...state.filter((item) => item.id !== parseInt(action.payload.id))];
+      return [...state.filter((item) => item.id !== parseInt(action.payload.id, 10))];
     default:
       return state;
   }

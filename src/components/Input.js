@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
 import { addBook } from '../redux/books/book';
 
 const Input = () => {
-  const books = useSelector(state => state.book);
+  const books = useSelector((state) => state.book);
   const dispatch = useDispatch();
 
-  const [ authorName, setAuthorName ] = useState('');
-  const [ titleName, setTitleName ] = useState('');
+  const [authorName, setAuthorName] = useState('');
+  const [titleName, setTitleName] = useState('');
 
   const submitForm = (element) => {
     element.preventDefault();
@@ -18,7 +17,7 @@ const Input = () => {
     dispatch(addBook(id, author, title))
     setAuthorName('');
     setTitleName('');
-  }
+  };
 
   return (
     <form onSubmit={submitForm}>
@@ -27,6 +26,6 @@ const Input = () => {
       <button type="submit">Submit</button>
     </form>
   );
-}
+};
 
 export default Input;
