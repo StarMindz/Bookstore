@@ -1,4 +1,15 @@
-const InitialState = [];
+const InitialState = [
+  {
+    id: 1,
+    author: 'J.K. Rowling',
+    title: 'Harry Porter',
+  },
+  {
+    id: 2,
+    author: 'J.R.R. Tolkien',
+    title: 'The Lord of the Rings',
+  },
+];
 
 export const addBook = (id, author, title) => {
   const action = {
@@ -8,10 +19,10 @@ export const addBook = (id, author, title) => {
   return action;
 };
 
-export const removeBook = (id, author, title) => {
+export const removeBook = (id) => {
   const action = {
     type: 'Bookstore/books/REMOVED_BOOK',
-    payload: { id, author, title },
+    payload: { id },
   };
   return action;
 };
@@ -22,7 +33,7 @@ const bookReducer = (state = InitialState, action) => {
       return [...state, action.payload];
 
     case ('Bookstore/books/REMOVED_BOOK'):
-      return state.filter((item) => item.id !== action.payload.id);
+      return [...state.filter((item) => item.id !== parseInt(action.payload.id))];
     default:
       return state;
   }
