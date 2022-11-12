@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaUserAlt } from 'react-icons/fa';
 
-const Navbar = () => {
+const Nav = () => {
   const links = [
     {
       id: 1,
