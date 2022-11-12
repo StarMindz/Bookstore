@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/book';
+import { useDispatch } from 'react-redux';
+import { addBook, fetchBooks } from '../redux/books/book';
 
 const Input = () => {
-  const books = useSelector((state) => state.book);
   const dispatch = useDispatch();
 
   const [authorName, setAuthorName] = useState('');
@@ -11,10 +10,11 @@ const Input = () => {
 
   const submitForm = (element) => {
     element.preventDefault();
-    const id = books.length + 1;
+    const id = Date.now();
     const author = authorName;
     const title = titleName;
     dispatch(addBook(id, author, title));
+    dispatch(fetchBooks());
     setAuthorName('');
     setTitleName('');
   };

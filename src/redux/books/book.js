@@ -1,42 +1,43 @@
-const InitialState = [
-  {
-    id: 1,
-    author: 'J.K. Rowling',
-    title: 'Harry Porter',
-  },
-  {
-    id: 2,
-    author: 'J.R.R. Tolkien',
-    title: 'The Lord of the Rings',
-  },
-];
+import axios from "axios";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const addBook = (id, author, title) => {
-  const action = {
-    type: 'Bookstore/books/ADDED_BOOK',
-    payload: { id, author, title },
+const initialState = [];
+
+export const fetchBooks = createAsyncThunk('books/fetchBooks', () => axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books')
+    .then((response) => {
+      const books = response.data;
+      const data = Object.keys(books).map((id) => ({
+        id: id,
+        title: books[id][0].title,
+        author: books[id][0].author,
+        category: books[id][0].category,
+    }));
+    return data;
+  })
+);
+
+export const addBook = createAsyncThunk('books/addBooks', (id, author, title) => {
+  const book = {
+    item_id: id,
+    title: title,
+    author: author,
+    category: '',
   };
-  return action;
-};
+  axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books', book)
+    .then((response) => response.status);
+});
+  
+export const removeBooks = createAsyncThunk('books/removeBooks', (id) => {
+  axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books'/${id}`)
+    .then((response) => response.data);
+});
+  
+const booksSlice = createSlice({
+  name: 'books',
+  initialState,
+  extraReducers: (builder) => {
+    builder.addCase(fetchBooks.fulfilled, (state, action) => action.payload);
+  },
+});
 
-export const removeBook = (id) => {
-  const action = {
-    type: 'Bookstore/books/REMOVED_BOOK',
-    payload: { id },
-  };
-  return action;
-};
-
-const bookReducer = (state = InitialState, action) => {
-  switch (action.type) {
-    case ('Bookstore/books/ADDED_BOOK'):
-      return [...state, action.payload];
-
-    case ('Bookstore/books/REMOVED_BOOK'):
-      return [...state.filter((item) => item.id !== parseInt(action.payload.id, 10))];
-    default:
-      return state;
-  }
-};
-
-export default bookReducer;
+export default booksSlice.reducer;
