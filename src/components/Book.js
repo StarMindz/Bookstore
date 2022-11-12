@@ -12,7 +12,7 @@ const Book = ({ id, author, title }) => {
     <div id={id} className=" my-5 p-5 w-11/12 mx-auto border border-gray-20 grid sm:grid-cols-1 md:grid-cols-3">
       <div className="">
         <li className="0">
-          <p className="text-gray-600 font-bold">{category}</p>
+          <p className="text-gray-600 font-bold">Fiction</p>
           <h2 className="text-2xl text-stone-900 font-bold">
             {title}
           </h2>
