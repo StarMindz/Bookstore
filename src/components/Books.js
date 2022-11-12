@@ -11,12 +11,11 @@ const Books = () => {
 
   useEffect(() => {
     dispatch(fetchBooks());
-  }, [books, dispatch]);
+  }, [dispatch]);
 
   const handleRemove = (element) => {
     const idNumber = element.target.id;
     dispatch(removeBooks(idNumber));
-    dispatch(fetchBooks());
   };
 
   return (

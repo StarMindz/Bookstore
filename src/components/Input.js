@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook, fetchBooks } from '../redux/books/book';
+import { addBook } from '../redux/books/book';
 
 const Input = () => {
   const dispatch = useDispatch();
@@ -10,13 +10,15 @@ const Input = () => {
 
   const submitForm = (element) => {
     element.preventDefault();
-    const id = Date.now();
-    const author = authorName;
-    const title = titleName;
-    dispatch(addBook(id, author, title));
-    dispatch(fetchBooks());
+    const book = {
+      item_id: Date.now(),
+      title: titleName,
+      author: authorName,
+      category: '',
+    };
     setAuthorName('');
     setTitleName('');
+    dispatch(addBook(book));
   };
 
   return (
