@@ -9,7 +9,7 @@ const Book = ({ id, author, title }) => {
     setChapterCounter(Math.round(Math.random() * 30));
   }, []);
   const book = (
-    <div className=" my-5 p-5 w-11/12 mx-auto border border-gray-20 grid sm:grid-cols-1 md:grid-cols-3">
+    <div id={id} className=" my-5 p-5 w-11/12 mx-auto border border-gray-20 grid sm:grid-cols-1 md:grid-cols-3">
       <div className="">
         <li className="0">
           <p className="text-gray-600 font-bold">{category}</p>
@@ -29,7 +29,7 @@ const Book = ({ id, author, title }) => {
 
         <div className="flex-column">
           <p>
-            {count}
+            {counter}
             %
           </p>
           <p>Completed</p>
@@ -42,7 +42,7 @@ const Book = ({ id, author, title }) => {
           <p>
             CHAPTER
             {' '}
-            {chapterCount}
+            {chapterCounter}
           </p>
           <button type="button" className="text-stone-200 bg-blue-600 p-2 rounded mt-4">UPDATE PROGRESS</button>
         </div>
