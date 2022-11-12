@@ -13,8 +13,7 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', () => axios.get('
       category: books[id][0].category,
     }));
     return data;
-  })
-);
+  }),);
 
 export const addBook = createAsyncThunk('books/addBooks', (book) => {
   axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books', book)
@@ -23,7 +22,7 @@ export const addBook = createAsyncThunk('books/addBooks', (book) => {
       return data;
     });
 });
-  
+
 export const removeBooks = createAsyncThunk('books/removeBooks', (id) => {
   axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books/${id}`)
     .then((response) => {
