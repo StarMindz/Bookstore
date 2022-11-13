@@ -22,11 +22,14 @@ const Input = () => {
   };
 
   return (
-    <form onSubmit={submitForm}>
-      <input type="text" placeholder="Title" value={titleName} onChange={(e) => setTitleName(e.target.value)} />
-      <input type="text" placeholder="Author" value={authorName} onChange={(e) => setAuthorName(e.target.value)} />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="m-1">
+      <h3 className="text-xl text-gray-600 ml-3 font-light">ADD A NEW BOOK</h3>
+      <form onSubmit={submitForm} className="d-flex flex-wrap space-evenly container-fluid">
+        <input className="p-2 md:w-5/12 rounded outline-none m-2" type="text" placeholder="Title" value={titleName} onChange={(e) => setTitleName(e.target.value)} />
+        <input className="p-2 rounded outline-none m-2" type="text" placeholder="Author" value={authorName} onChange={(e) => setAuthorName(e.target.value)} />
+        <button className="bg-blue-600 px-5 py-2 text-gray-100 rounded hover:bg-blue-900" type="submit">Submit</button>
+      </form>
+    </div>
   );
 };
 
