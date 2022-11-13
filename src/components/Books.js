@@ -1,41 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBooks, removeBooks } from '../redux/books/book';
 import Book from './Book';
 import Input from './Input';
 
-class Books extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: [
-        {
-          id: 1,
-          author: 'J.K. Rowling',
-          title: 'Harry Porter',
-        },
-        {
-          id: 2,
-          author: 'J.R.R. Tolkien',
-          title: 'The Lord of the Rings',
-        },
-      ],
-    };
-  }
+const Books = () => {
+  const books = useSelector((state) => state.book);
 
-  render() {
-    const { books } = this.state;
-    return (
-      <>
-        {books.map((book) => {
-          const bookJsx = (
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  const handleRemove = (element) => {
+    const idNumber = element.target.id;
+    dispatch(removeBooks(idNumber));
+  };
+
+  return (
+    <>
+      {books.map((book) => {
+        const bookJsx = (
+          <div className="singleBook">
             <Book id={book.id} author={book.author} title={book.title} />
-          );
-          return bookJsx;
-        })}
-        <button type="submit">Remove</button>
-        <Input />
-      </>
-    );
-  }
-}
+            <button className="pr-3 border-r-2 text-blue-900 hover:text-blue-100" id={book.id} onClick={handleRemove} type="submit">Remove</button>
+          </div>
+        );
+        return bookJsx;
+      })}
+      <Input />
+    </>
+  );
+};
 
 export default Books;

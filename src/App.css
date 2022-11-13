@@ -1,3 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.progress {
+  border-radius: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 6px solid #307bbe;
+  border-left-color: #eee;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-right: 30px;
+}
+
 .App {
   font-family: Arial, Helvetica, sans-serif;
 }

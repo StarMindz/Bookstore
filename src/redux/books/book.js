@@ -1,31 +1,42 @@
-const InitialState = [];
+import axios from 'axios';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-export const addBook = (id, author, title) => {
-  const action = {
-    type: 'Bookstore/books/ADDED_BOOK',
-    payload: { id, author, title },
-  };
-  return action;
-};
+const initialState = [];
 
-export const removeBook = (id, author, title) => {
-  const action = {
-    type: 'Bookstore/books/REMOVED_BOOK',
-    payload: { id, author, title },
-  };
-  return action;
-};
+export const fetchBooks = createAsyncThunk('books/fetchBooks', () => axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books')
+  .then((response) => {
+    const books = response.data;
+    const data = Object.keys(books).map((id) => ({
+      id: Number(id),
+      title: books[id][0].title,
+      author: books[id][0].author,
+      category: books[id][0].category,
+    }));
+    return data;
+  }));
 
-const bookReducer = (state = InitialState, action) => {
-  switch (action.type) {
-    case ('Bookstore/books/ADDED_BOOK'):
-      return [...state, action.payload];
+export const addBook = createAsyncThunk('books/addBooks', (book) => {
+  axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books', book)
+    .then((response) => response.status).then((data) => {
+      window.location.reload();
+      return data;
+    });
+});
 
-    case ('Bookstore/books/REMOVED_BOOK'):
-      return state.filter((item) => item.id !== action.payload.id);
-    default:
-      return state;
-  }
-};
+export const removeBooks = createAsyncThunk('books/removeBooks', (id) => {
+  axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books/${id}`)
+    .then((response) => {
+      window.location.reload();
+      return response.data;
+    });
+});
 
-export default bookReducer;
+const booksSlice = createSlice({
+  name: 'books',
+  initialState,
+  extraReducers: (builder) => {
+    builder.addCase(fetchBooks.fulfilled, (state, action) => action.payload);
+  },
+});
+
+export default booksSlice.reducer;
