@@ -24,7 +24,7 @@ const Books = () => {
         const bookJsx = (
           <div className="singleBook">
             <Book id={book.id} author={book.author} title={book.title} />
-            <button id={book.id} onClick={handleRemove} type="submit">Remove</button>
+            <button className="pr-3 border-r-2 text-blue-900 hover:text-blue-100" id={book.id} onClick={handleRemove} type="submit">Remove</button>
           </div>
         );
         return bookJsx;
