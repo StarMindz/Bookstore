@@ -3,6 +3,11 @@
 #  BookStore
 
 > "Bookstore"  is a website that allow one to store book titles with their author and displays them. It serves as an online archive of books. This Website was created using React. Users can view a list of books, add a book by entering a title, an author, and a category, and remove a book.
+The Bookstore is a website similar to the "Awesome Books" website built in the previous module. You will create an MVP version of it that allows you to:
+
+-Display a list of books.
+-Add a book.
+-Remove a selected book.
 
 
 ## Built With
@@ -28,9 +33,8 @@ Install
 
 👤 **Stanley Nnamani aka starmindz**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@starmindz](https://github.com/StarMindz)
+- LinkedIn: [Stanley Nnamani](https://www.linkedin.com/in/stanley-nnamani-72224b180)
 
 ## 🤝 Contributing
 
