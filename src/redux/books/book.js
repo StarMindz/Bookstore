@@ -17,18 +17,12 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', () => axios.get('
 
 export const addBook = createAsyncThunk('books/addBooks', (book) => {
   axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books', book)
-    .then((response) => response.status).then((data) => {
-      // window.location.reload();
-      return data;
-    });
+    .then((response) => response.status).then((data) => data);
 });
 
 export const removeBooks = createAsyncThunk('books/removeBooks', (id) => {
   axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books/${id}`)
-    .then((response) => {
-      // window.location.reload();
-      return response.data;
-    });
+    .then((response) => response.data);
 });
 
 const booksSlice = createSlice({

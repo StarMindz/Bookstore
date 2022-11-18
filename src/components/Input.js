@@ -33,7 +33,7 @@ const Input = () => {
         <div className="actualInput">
           <input className="input titleInput" type="text" placeholder="Title" value={titleName} onChange={(e) => setTitleName(e.target.value)} />
           <input className="input authorInput" type="text" placeholder="Author" value={authorName} onChange={(e) => setAuthorName(e.target.value)} />
-          <select className="input categoryInput" placeholder='Category' id="category" name="category" onChange={(e) => setCategoryName(e.target.value ? e.target.value: '')}>
+          <select className="input categoryInput" placeholder="Category" id="category" name="category" onChange={(e) => setCategoryName(e.target.value ? e.target.value : '')}>
             <option value="fiction" selected>Fiction</option>
             <option value="romance">Romance</option>
             <option value="mystery">Mystery</option>
@@ -42,7 +42,7 @@ const Input = () => {
             <option value="autobiography">Autobiography</option>
           </select>
         </div>
-      <button className="submitButton" type="submit">Submit</button>
+        <button className="submitButton" type="submit">Submit</button>
       </div>
     </form>
   );

@@ -11,6 +11,7 @@
   padding: 10px;
   background-color: #fff;
 }
+
 .projectHeading {
   width: auto;
   height: 2.313rem;
@@ -22,7 +23,7 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #0290ff
+  color: #0290ff;
 }
 
 .menuitem {
@@ -55,8 +56,8 @@
 }
 
 .mainBookSection {
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .categoryTitle {
@@ -74,7 +75,7 @@
 .bookTitle {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -85,7 +86,7 @@
 }
 
 .authorName {
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 1.3075rem;
   font-weight: 300;
   font-stretch: normal;
@@ -98,7 +99,7 @@
 }
 
 .bookButton {
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 0.975rem;
   font-weight: 300;
   font-stretch: normal;
@@ -154,7 +155,7 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.18px;
-  color: white
+  color: white;
 }
 
 .input {
@@ -192,6 +193,7 @@
 .progressSection {
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
 }
 
 .progressBar {
@@ -241,12 +243,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-top: 30px;
 }
 
 .chapterHead {
   opacity: 0.5;
   margin: 10px;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 1.013rem;
   font-weight: 300;
   font-stretch: normal;
@@ -257,7 +260,7 @@
 
 .chapterCount {
   margin: 10px;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
