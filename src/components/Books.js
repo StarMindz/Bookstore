@@ -16,6 +16,7 @@ const Books = () => {
   const handleRemove = (element) => {
     const idNumber = element.target.id;
     dispatch(removeBooks(idNumber));
+    setTimeout(() => dispatch(fetchBooks()), 500);
   };
 
   return (
@@ -23,7 +24,7 @@ const Books = () => {
       {books.map((book) => {
         const bookJsx = (
           <div className="singleBook">
-            <Book id={book.id} author={book.author} title={book.title} />
+            <Book id={book.id} author={book.author} title={book.title} category={book.category} />
             <button id={book.id} onClick={handleRemove} type="submit">Remove</button>
           </div>
         );
