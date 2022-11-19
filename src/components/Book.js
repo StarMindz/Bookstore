@@ -1,15 +1,21 @@
+/* eslint-disable no-param-reassign */
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBooks, fetchBooks } from '../redux/books/book';
 
-const Book = ({ id, author, title, category }) => {
+const Book = ({
+  id,
+  author,
+  title,
+  category
+}) => {
   const dispatch = useDispatch();
 
   category = category.toUpperCase();
   const [count, setCount] = useState('');
   const [chapterCount, setChapterCount] = useState('');
-  
+
   useEffect(() => {
     setCount(Math.round(Math.random() * 100));
     setChapterCount(Math.round(Math.random() * 30));
@@ -29,7 +35,7 @@ const Book = ({ id, author, title, category }) => {
         <div className="authorName">{ author }</div>
         <div className="buttons">
           <span className="bookButton specialButton" type="submit">Comments</span>
-          <span className="bookButton specialButton" id={id} onClick={handleRemove} type="submit">Remove</span>
+          <button className="bookButton specialButton" id={id} onClick={handleRemove} type="submit">Remove</button>
           <span className="bookButton" type="submit">Edit</span>
         </div>
       </div>
@@ -72,6 +78,7 @@ Book.defaultProps = {
   id: 0,
   author: '',
   title: '',
+  category: '',
 };
 
 export default Book;
