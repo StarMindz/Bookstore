@@ -16,7 +16,6 @@
   width: auto;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
-  font-family: Montserrat;
   font-size: 1.175rem;
   font-weight: bold;
   font-stretch: normal;
@@ -30,7 +29,6 @@
   width: 3.688rem;
   height: 1rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
-  font-family: Montserrat;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
@@ -63,7 +61,6 @@
 .categoryTitle {
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
   font-size: 0.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -148,7 +145,6 @@
 .inputBook {
   margin: 1.813rem 3.75rem 1.188rem 0;
   text-align: center;
-  font-family: Montserrat;
   font-size: 1.25rem;
   font-weight: bold;
   font-stretch: normal;
@@ -217,7 +213,6 @@
 
 .countValue {
   margin: 0.063rem 5.75rem 0 0.688rem;
-  font-family: Montserrat;
   font-size: 2rem;
   font-weight: normal;
   font-stretch: normal;
@@ -229,7 +224,6 @@
 .countText {
   margin: 0.438rem 4.938rem 0.75rem 0.75rem;
   opacity: 0.5;
-  font-family: Montserrat;
   font-size: 0.875rem;
   font-weight: normal;
   font-stretch: normal;
