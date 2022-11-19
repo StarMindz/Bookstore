@@ -14,7 +14,7 @@ const Books = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="body">
       {books.map((book) => {
         const bookJsx = (
           <div className="singleBook">
@@ -25,7 +25,7 @@ const Books = () => {
       })}
       <div className="divider" />
       <Input />
-    </>
+    </div>
   );
 };
 

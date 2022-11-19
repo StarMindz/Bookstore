@@ -16,7 +16,8 @@
   width: auto;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
-  font-size: 1.175rem;
+  font-size: 1.875rem;
+  font-family: Montserrat;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -30,6 +31,7 @@
   height: 1rem;
   margin: 1.125rem 2.563rem 0.688rem 0;
   font-size: 0.813rem;
+  font-family: Montserrat;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -41,7 +43,7 @@
 }
 
 .bookContainer {
-  background-color: #f5f6fa;
+  background-color: #fff;
   margin: 10px;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
   border-radius: 4px;
@@ -53,6 +55,10 @@
   justify-content: space-between;
 }
 
+.body {
+  background-color: #f5f6fa;
+}
+
 .mainBookSection {
   display: flex;
   flex-direction: column;
@@ -61,6 +67,7 @@
 .categoryTitle {
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
+  font-family: Montserrat;
   font-size: 0.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -104,7 +111,7 @@
   line-height: normal;
   letter-spacing: normal;
   margin-top: 10px;
-  color: #4386bf;
+  background-color: #fff;
   padding: 5px;
   padding-right: 10px;
   padding-left: 10px;
@@ -114,7 +121,7 @@
 
 .specialButton {
   border-right: 1px solid black;
-  background-color: #f5f6fa;
+  background-color: #fff;
 }
 
 .buttons {
@@ -128,13 +135,12 @@
 .Form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #b5b8c5;
+  align-items: flex-start;
+  background-color: #fafafa;
 }
 
 .inputSection {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -145,44 +151,47 @@
 }
 
 .inputBook {
-  margin: 1.813rem 3.75rem 1.188rem 0;
-  text-align: center;
+  margin-left: 6.25rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  font-family: Montserrat;
   font-size: 1.25rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.18px;
-  color: white;
+  color: #888;
 }
 
 .input {
   height: 2.013rem;
-  margin: 1.188rem 2.125rem 1.3rem 1.1rem;
   padding: 0.813rem 1.688rem 0.813rem 1.063rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
+  margin-left: 6.25rem;
 }
 
 .titleInput,
 .authorInput {
-  width: 17rem;
+  width: 16rem;
 }
 
 .categoryInput {
-  width: 15rem;
+  width: 10rem;
   padding: 0;
-  height: 2.9rem;
+  height: 3.9rem;
   color: rgb(165, 165, 165);
 }
 
 .submitButton {
-  width: 11.5rem;
-  height: 2.813rem;
+  width: 13.5rem;
+  height: 3.213rem;
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
   margin: 20px;
+  margin-left: 70px;
   color: white;
   background-color: #0290ff;
 }
@@ -191,6 +200,7 @@
   display: flex;
   flex-direction: row;
   margin: 30px;
+  margin-left: 230px;
 }
 
 .progressBar {
@@ -250,16 +260,20 @@
 }
 
 .icon {
-  margin-left: 700px;
-  font-size: 50px;
+  width: 1.813rem;
+  height: 1.813rem;
+  margin: 0 0 0 41.5rem;
+  padding: 0.875rem;
+  border: solid 1px #e8e8e8;
   color: #0290ff;
+  border-radius: 100%;
 }
 
 .chapterHead {
   opacity: 0.5;
   margin: 10px;
   font-family: 'Roboto Slab', sans-serif;
-  font-size: 1.013rem;
+  font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -281,12 +295,12 @@
 .chapterButton {
   width: 11.5rem;
   height: 2.063rem;
-  margin: 5px;
-  padding: 5px;
-  color: white;
-  border-radius: 3px;
+  margin: 0.75rem 1.75rem 0.563rem 0;
+  padding: 0.438rem;
   text-align: center;
-  background-color: #236191;
+  border-radius: 3px;
+  color: white;
+  background-color: #0290ff;
 }
 
 @media (min-width: 600px) {
