@@ -8,7 +8,7 @@ const Book = ({
   id,
   author,
   title,
-  category
+  category,
 }) => {
   const dispatch = useDispatch();
 
