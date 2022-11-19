@@ -114,6 +114,7 @@
 
 .specialButton {
   border-right: 1px solid black;
+  background-color: #f5f6fa;
 }
 
 .buttons {
@@ -189,7 +190,7 @@
 .progressSection {
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  margin: 30px;
 }
 
 .progressBar {
@@ -240,6 +241,20 @@
   margin-top: 30px;
 }
 
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #cacdd6;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  margin-left: 700px;
+  font-size: 50px;
+  color: #0290ff;
+}
+
 .chapterHead {
   opacity: 0.5;
   margin: 10px;
@@ -286,5 +301,10 @@
 
   .navBar {
     padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  }
+
+  .progressSection {
+    border-right: 1px solid #cacdd6;
+    padding: 20px;
   }
 }

@@ -23,6 +23,7 @@ const Books = () => {
         );
         return bookJsx;
       })}
+      <div className="divider"></div>
       <Input />
     </>
   );
