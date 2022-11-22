@@ -1,41 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBooks } from '../redux/books/book';
 import Book from './Book';
 import Input from './Input';
 
-class Books extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: [
-        {
-          id: 1,
-          author: 'J.K. Rowling',
-          title: 'Harry Porter',
-        },
-        {
-          id: 2,
-          author: 'J.R.R. Tolkien',
-          title: 'The Lord of the Rings',
-        },
-      ],
-    };
-  }
+const Books = () => {
+  const books = useSelector((state) => state.book);
 
-  render() {
-    const { books } = this.state;
-    return (
-      <>
-        {books.map((book) => {
-          const bookJsx = (
-            <Book id={book.id} author={book.author} title={book.title} />
-          );
-          return bookJsx;
-        })}
-        <button type="submit">Remove</button>
-        <Input />
-      </>
-    );
-  }
-}
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  return (
+    <div className="body">
+      {books.map((book) => {
+        const bookJsx = (
+          <div className="singleBook">
+            <Book id={book.id} author={book.author} title={book.title} category={book.category} />
+          </div>
+        );
+        return bookJsx;
+      })}
+      <div className="divider" />
+      <Input />
+    </div>
+  );
+};
 
 export default Books;

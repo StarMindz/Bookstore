@@ -1,3 +1,335 @@
 .App {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstHeaderSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 10px;
+}
+
+.projectHeading {
+  width: 100px;
+  font-size: 1.075rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.menuitem {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 5px;
+  font-size: 0.613rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.bookContainer {
+  background-color: #fff;
+  margin: 10px;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.body {
+  background-color: #f5f6fa;
+}
+
+.mainBookSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryTitle {
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.bookTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.authorName {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.975rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.bookButton {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.975rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-top: 10px;
+  background-color: #fff;
+  color: #4386bf;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.specialButton {
+  border-right: 1px solid black;
+  background-color: #fff;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.bookButton:hover {
+  color: #1f4464;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fafafa;
+}
+
+.inputSection {
+  display: flex;
+  align-items: center;
+}
+
+.actualInput {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.inputBook {
+  margin-left: 6.25rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.input {
+  height: 2.013rem;
+  padding: 0.813rem 1.688rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  margin-left: 6.25rem;
+}
+
+.titleInput,
+.authorInput {
+  width: 16rem;
+}
+
+.categoryInput {
+  width: 10rem;
+  padding: 0;
+  height: 3.9rem;
+  color: rgb(165, 165, 165);
+}
+
+.submitButton {
+  width: 13.5rem;
+  height: 3.213rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  margin: 20px;
+  margin-left: 70px;
+  color: white;
+  background-color: #0290ff;
+}
+
+.progressSection {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+}
+
+.progressBar {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+  border-image-source: linear-gradient(to bottom, #379cf6, #379cf6);
+  border-image-slice: 1;
+  border-radius: 50%;
+  border: 6px solid #307bbe;
+  border-left-color: #eee;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-right: 30px;
+}
+
+.progressDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.countValue {
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.countText {
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.chapterDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #cacdd6;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 1.813rem;
+  height: 1.813rem;
+  padding: 0.875rem;
+  border: solid 1px #e8e8e8;
+  color: #0290ff;
+  border-radius: 100%;
+}
+
+.chapterHead {
+  opacity: 0.5;
+  margin: 10px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.chapterCount {
+  margin: 10px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.chapterButton {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 1.75rem 0.563rem 0;
+  padding: 0.438rem;
+  text-align: center;
+  border-radius: 3px;
+  color: white;
+  background-color: #0290ff;
+}
+
+@media (min-width: 600px) {
+  .bookContainer {
+    margin: 2.313rem 6.25rem 0;
+  }
+
+  .projectHeading {
+    font-size: 1.875rem;
+    width: auto;
+    height: 2.313rem;
+    margin: 0.375rem 2.938rem 0.125rem 0;
+  }
+
+  .navBar {
+    padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  }
+
+  .progressSection {
+    border-right: 1px solid #cacdd6;
+    padding: 20px;
+  }
+
+  .menuitem {
+    margin: 1.125rem 2.563rem 0.688rem 0;
+    font-size: 0.813rem;
+  }
+}
