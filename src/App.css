@@ -5,18 +5,23 @@
 .navBar {
   display: flex;
   flex-direction: row;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstHeaderSection {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   height: 5.938rem;
   margin: 0 0 2.375rem;
   padding: 10px;
-  background-color: #fff;
 }
 
 .projectHeading {
-  width: auto;
-  height: 2.313rem;
-  margin: 0.375rem 2.938rem 0.125rem 0;
-  font-size: 1.875rem;
+  width: 100px;
+  font-size: 1.075rem;
   font-family: Montserrat, sans-serif;
   font-weight: bold;
   font-stretch: normal;
@@ -29,8 +34,8 @@
 .menuitem {
   width: 3.688rem;
   height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
-  font-size: 0.813rem;
+  margin: 5px;
+  font-size: 0.613rem;
   font-family: Montserrat, sans-serif;
   font-weight: normal;
   font-stretch: normal;
@@ -201,7 +206,6 @@
   display: flex;
   flex-direction: row;
   margin: 30px;
-  margin-left: 230px;
 }
 
 .progressBar {
@@ -263,7 +267,6 @@
 .icon {
   width: 1.813rem;
   height: 1.813rem;
-  margin: 0 0 0 41.5rem;
   padding: 0.875rem;
   border: solid 1px #e8e8e8;
   color: #0290ff;
@@ -311,7 +314,9 @@
 
   .projectHeading {
     font-size: 1.875rem;
-    width: 15rem;
+    width: auto;
+    height: 2.313rem;
+    margin: 0.375rem 2.938rem 0.125rem 0;
   }
 
   .navBar {
@@ -321,5 +326,10 @@
   .progressSection {
     border-right: 1px solid #cacdd6;
     padding: 20px;
+  }
+
+  .menuitem {
+    margin: 1.125rem 2.563rem 0.688rem 0;
+    font-size: 0.813rem;
   }
 }

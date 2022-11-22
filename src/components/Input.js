@@ -11,9 +11,7 @@ const Input = () => {
 
   const submitForm = (element) => {
     element.preventDefault();
-    // if (categoryName === '') {
-    //   setCategoryName('fiction');
-    // }
+
     const book = {
       item_id: Date.now(),
       title: titleName,
@@ -23,7 +21,7 @@ const Input = () => {
     setAuthorName('');
     setTitleName('');
     dispatch(addBook(book));
-    setTimeout(() => dispatch(fetchBooks()), 500);
+    setTimeout(() => dispatch(fetchBooks()), 1000);
   };
 
   return (
