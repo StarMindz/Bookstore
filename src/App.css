@@ -215,7 +215,7 @@
   border-width: 5px;
   border-image-source: linear-gradient(to bottom, #379cf6, #379cf6);
   border-image-slice: 1;
-  border-radius: 50%;
+  border-radius: 100%;
   border: 6px solid #307bbe;
   border-left-color: #eee;
   -webkit-transform: rotate(45deg);
